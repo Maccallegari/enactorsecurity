@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Serial Number Security Clearance Checker - Enactor Style</title>
+  <title>Enactor Serial Number Security Clearance Checker</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    /* Background video styling */
+    .bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.15;
+      filter: blur(2px) brightness(0.95);
+      pointer-events: none;
+    }
 
     body {
       background-color: #01162e;
@@ -19,6 +35,8 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
 
     .logo {
@@ -26,7 +44,7 @@
       height: auto;
       margin: 0 auto 1.5rem auto;
       display: block;
-      filter: brightness(0) invert(1); /* make sure logo stands out on dark bg */
+      filter: brightness(0) invert(1);
     }
 
     h1 {
@@ -110,6 +128,12 @@
   </style>
 </head>
 <body>
+
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="https://raw.githubusercontent.com/Maccallegari/enactorsecurity/main/retail-background.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
   <img
     src="https://enactor.co/wp-content/uploads/2020/04/enactor-logo-dark2x.png"
     alt="Enactor Logo"
@@ -173,5 +197,6 @@
       }
     }
   </script>
+
 </body>
 </html>
